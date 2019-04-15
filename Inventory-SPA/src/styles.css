@@ -20,3 +20,14 @@ body {
   font-size: 1.08333333rem;
   font-weight: 400;
 }
+
+
+.i_web_client {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  position: relative;
+  background-color: #f9f9f9;
+  direction: ltr;
+  width: 100%;
+}

@@ -1,0 +1,14 @@
+.i_content {
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 100%;
+  flex: 1 1 auto;
+  position: relative;
+  display: block;
+}
+
+
+.i_p {
+  height: 1500px;
+}
