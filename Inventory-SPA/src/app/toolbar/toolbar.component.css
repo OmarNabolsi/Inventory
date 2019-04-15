@@ -1,0 +1,76 @@
+.i_main_navbar {
+  flex: 0 0 auto;
+  position: relative;
+  height: 46px;
+  border-bottom: 1px solid #68465f;
+  background-color: #875A7B;
+  color: white;
+}
+
+.i_main_navbar > .i_menu_toggle {
+  margin-right: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.i_main_navbar > .i_menu_toggle > .mat-icon {
+  line-height: 2;
+}
+
+.i_main_navbar > .i_menu_brand {
+  float: left;
+  margin-right: 35px;
+  user-select: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 46px;
+  cursor: pointer;
+}
+
+.i_main_navbar > a:hover {
+  background-color: var(--blue);
+}
+
+.i_main_navbar > a,
+.i_main_navbar > button {
+  float: left;
+  height: 46px;
+  border: none;
+  padding: 0 12px 0 16px;
+  line-height: 46px;
+  background-color: transparent;
+  text-align: center;
+  font-size: 18px;
+  user-select: none;
+}
+
+a {
+  color: #008784;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.i_main_navbar > ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  float: left;
+}
+
+.i_main_navbar > ul > li > a:hover {
+  background-color: var(--blue);
+}
+
+.i_main_navbar > ul > li > a {
+  display: block;
+  height: 46px;
+  padding: 0 10px;
+  color: white;
+  line-height: 46px;
+}

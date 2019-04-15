@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppMatModule } from './material/app-mat.module';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ToolbarComponent],
   imports: [BrowserModule, BrowserAnimationsModule, AppMatModule],
   providers: [],
   bootstrap: [AppComponent]

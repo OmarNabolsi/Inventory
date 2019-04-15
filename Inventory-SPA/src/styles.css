@@ -1,2 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+  font-size: 12px;
+  --blue: #68465f;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 1.08333333rem;
+  font-weight: 400;
+}
