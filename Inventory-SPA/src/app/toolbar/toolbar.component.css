@@ -74,3 +74,34 @@ li {
   color: white;
   line-height: 46px;
 }
+
+.mat-menu-panel {
+  border-radius: 0px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  will-change: transform;
+  top: 0px;
+  left: 0px;
+  transform: translate3d(0px, 46px, 0px);
+  max-height: 90vh;
+  min-width: 100%;
+  overflow: auto;
+  margin-top: 0;
+}
+
+.dropdown-Item {
+  position: relative;
+  color: #666666;
+  padding: 0px 20px;
+  width: 100%;
+  clear: both;
+  font-weight: 400;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  font-size: 1.08333333rem;
+  line-height: 25px;
+  height: 25px;
+}

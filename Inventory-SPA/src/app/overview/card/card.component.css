@@ -1,0 +1,85 @@
+@import "../../app.css";
+
+.i_kanban_item {
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: column nowrap;
+  position: relative;
+  width: 300px;
+  margin: 4px 8px;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-color: #ced4da;
+  min-width: 340px;
+  border: 1px solid #dee2e6;
+  background-color: white;
+}
+
+.i_primary {
+  color: #212529;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: block;
+  padding-right: 32px;
+}
+
+a {
+  color: #008784;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.i_toggle_btn {
+  margin: -1px -1px auto auto;
+  padding: 10px 10px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  vertical-align: top;
+  color: #666666;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: 0;
+}
+
+.i_toggle_icn {
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+.i_kanban_content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-right: 0;
+  padding-left: 0;
+  vertical-align: top;
+  min-height: 80px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
+.col_left {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 16px;
+  padding-left: 16px;
+}

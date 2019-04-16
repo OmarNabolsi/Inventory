@@ -17,9 +17,18 @@
         </a>
       </li>
       <li>
-        <a href="#" class="i_menu_entry_lvl_1">
+        <a class="i_menu_entry_lvl_1" [matMenuTriggerFor]="masterDataMenu">
           <span>Master Data</span>
         </a>
+
+        <mat-menu #masterDataMenu="matMenu" style="border-radius: 0px;">
+          <a class="dropdown-Item" mat-menu-item [routerLink]="['/product']">
+            <span>Products</span>
+          </a>
+          <a class="dropdown-Item" mat-menu-item>
+            <span>Reordering Rules</span>
+          </a>
+        </mat-menu>
       </li>
       <li>
         <a href="#" class="i_menu_entry_lvl_1">

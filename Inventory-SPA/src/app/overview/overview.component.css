@@ -1,0 +1,19 @@
+.i_overview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  direction: ltr;
+}
+
+.i_kanban {
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  align-content: stretch;
+  padding: 8px 8px;
+  overflow: visible;
+}
