@@ -42,3 +42,40 @@ body {
 a {
   cursor: pointer;
 }
+
+
+thead {
+  border: none;
+  color: #666666;
+  height: 46px;
+}
+tr.mat-header-row {
+  height: 46px!important;
+}
+
+th.mat-header-cell {
+  border-bottom-width: 0!important;
+  border-bottom-style: none!important;
+}
+
+.mat-header-cell {
+  font-size: 13px!important;
+  font-weight: bold!important;
+  color: #666666;
+}
+
+tbody:first-of-type {
+  box-shadow: inset 0px 5px 10px -4px rgba(0, 0, 0, 0.1);
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+tr.mat-row {
+  height: 33px!important;
+}

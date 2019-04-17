@@ -1,0 +1,44 @@
+@import "../../app.css";
+
+.i_form_statusbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  border-bottom: 1px solid #ced4da;
+  background-color: white;
+}
+
+.btn_statusbar {
+  min-height: 25px;
+  margin: 4px 3px 4px 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.i_buttons {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-around;
+}
+
+table {
+  width: 100%;
+}
+
+td, th {
+  width: 12%;
+}
+
+.text-info > td {
+  color: #66a7bb !important;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  font-size: 1.08333333rem;
+  font-weight: 400;
+  border-bottom-width: 0;
+  border-bottom-style: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
