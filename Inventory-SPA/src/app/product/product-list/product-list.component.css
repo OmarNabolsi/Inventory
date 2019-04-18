@@ -1,12 +1,18 @@
 @import "../../app.css";
 
+
 .i_form_statusbar {
   position: relative;
   display: flex;
   justify-content: space-between;
   padding-left: 16px;
+  height: 56px;
   border-bottom: 1px solid #ced4da;
   background-color: white;
+}
+
+.i_form_statusbar.i_right {
+  justify-content: flex-end;
 }
 
 .btn_statusbar {
@@ -16,11 +22,24 @@
   padding-bottom: 2px;
 }
 
+
+.i_cp_searchview {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  min-height: 30px;
+}
+
+.i_cp_searchfield {
+  width: 50%;
+}
+
 .i_buttons {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   align-content: space-around;
+  margin-top: 15px;
 }
 
 table {

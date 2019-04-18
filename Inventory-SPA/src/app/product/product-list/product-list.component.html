@@ -1,57 +1,71 @@
 <div class="i_form_statusbar">
   <div class="i_buttons">
-    <button
-      mat-button
-      class="btn-primary btn_statusbar"
-      [routerLink]="['view']"
-    >
+    <button mat-button class="btn-primary btn_statusbar" [routerLink]="['view']">
       Create
     </button>
   </div>
+
+  <div class="i_cp_searchview">
+    <mat-form-field class="i_cp_searchfield">
+      <input name="search" type="text" matInput placeholder="Search..." (keyup)="applyFilter($event.target.value)">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <mat-paginator></mat-paginator>
+  </div>
 </div>
 
-<table mat-table [dataSource]="dataSource" matSort>
-  <!-- ItemNo -->
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Item No</th>
-    <td mat-cell *matCellDef="let row">{{row.id}}</td>
-  </ng-container>
-  <!-- Name -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-    <td mat-cell *matCellDef="let row">{{row.name}}</td>
-  </ng-container>
-  <!-- SalesPrice -->
-  <ng-container matColumnDef="salesPrice">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Sales Price</th>
-    <td mat-cell *matCellDef="let row">{{row.salesPrice}}</td>
-  </ng-container>
-  <!-- Cost -->
-  <ng-container matColumnDef="cost">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Cost</th>
-    <td mat-cell *matCellDef="let row">{{row.cost}}</td>
-  </ng-container>
-  <!-- ProductCategory -->
-  <ng-container matColumnDef="productCategory">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Category</th>
-    <td mat-cell *matCellDef="let row">{{row.productCategory}}</td>
-  </ng-container>
-  <!-- ProductType -->
-  <ng-container matColumnDef="productType">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Type</th>
-    <td mat-cell *matCellDef="let row">{{row.productType}}</td>
-  </ng-container>
-  <!-- QuantityOnHand -->
-  <ng-container matColumnDef="onHand">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantity on Hand</th>
-    <td mat-cell *matCellDef="let row">{{row.onHand}}</td>
-  </ng-container>
-  <!-- ForecastedQuantity -->
-  <ng-container matColumnDef="forecasted">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Forecasted Quantity</th>
-    <td mat-cell *matCellDef="let row">{{row.forecasted}}</td>
-  </ng-container>
+<div class="products-table">
+  <table mat-table [dataSource]="dataSource" matSort class="table-hover">
+    <!-- ItemNo -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Item No</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+    <!-- Name -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let row">{{row.name}}</td>
+    </ng-container>
+    <!-- SalesPrice -->
+    <ng-container matColumnDef="salesPrice">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Sales Price</th>
+      <td mat-cell *matCellDef="let row">{{row.salesPrice | number:'0.2' }} LBP</td>
+    </ng-container>
+    <!-- Cost -->
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cost</th>
+      <td mat-cell *matCellDef="let row">{{row.cost | number:'0.2'}} LBP</td>
+    </ng-container>
+    <!-- ProductCategory -->
+    <ng-container matColumnDef="productCategory">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Category</th>
+      <td mat-cell *matCellDef="let row">{{row.productCategory}}</td>
+    </ng-container>
+    <!-- ProductType -->
+    <ng-container matColumnDef="productType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Type</th>
+      <td mat-cell *matCellDef="let row">{{row.productType}}</td>
+    </ng-container>
+    <!-- QuantityOnHand -->
+    <ng-container matColumnDef="onHand">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantity on Hand</th>
+      <td mat-cell *matCellDef="let row">{{row.onHand | number:'0.2'}}</td>
+    </ng-container>
+    <!-- ForecastedQuantity -->
+    <ng-container matColumnDef="forecasted">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Forecasted Quantity</th>
+      <td mat-cell *matCellDef="let row">{{row.forecasted | number:'0.2'}}</td>
+    </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr class="text-info" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+    <!-- <ng-container matColumnDef="pages">
+      <td mat-footer-cell *matFooterCellDef colspan="8">
+
+      </td>
+    </ng-container> -->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true">
+    </tr>
+    <tr class="text-info" mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onItemClick(row)"></tr>
+    <!-- <tr mat-footer-row *matFooterRowDef="['pages']; sticky: true"></tr> -->
+  </table>
+</div>

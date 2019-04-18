@@ -79,3 +79,19 @@ tbody tr:nth-child(odd) {
 tr.mat-row {
   height: 33px!important;
 }
+
+.table-hover tbody tr {
+  cursor: pointer;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+.i_cp_searchfield.mat-form-field.mat-focused .mat-form-field-label {
+  color: #00A09D;
+}
+.i_cp_searchfield.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #00A09D;
+}

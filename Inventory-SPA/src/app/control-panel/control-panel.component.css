@@ -31,7 +31,7 @@ ol {
 .breadcrumb-item {
   display: inline-block;
   max-width: 90%;
-  padding: 15px 0;
+  padding: 15px 0 0px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -39,15 +39,7 @@ ol {
 }
 
 
-.i_cp_searchview {
-  display: block;
-  width: 50%;
-  min-height: 30px;
-}
 
-.i_cp_searchfield {
-  width: 100%;
-}
 
 .i_cp_left {
   display: flex;
